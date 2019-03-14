@@ -1,0 +1,42 @@
+<style>
+    .logout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 1;
+        flex-grow: 1;
+        position: fixed;
+        top: 5.9rem;
+        right: 0;
+        border-bottom-left-radius: 1rem;
+        background-color: rgb(233, 213, 222);;
+        float: right;
+        width: 15rem;
+        padding-right: 0.5rem;
+        padding-bottom: 1rem;
+        z-index: 2;
+    }
+
+    .logout .logout-button{
+        margin: 1em;
+        background-color: rgba(133, 0, 59, 1);
+        color: white;
+        border-radius: 0.5rem;
+    }
+
+    .logout .logout-button:hover{
+        color: rgba(133, 0, 59, 1);
+    }
+
+</style>
+
+<div class="logout">
+    <md-button class="md-raised logout-button" ng-click="$ctrl.submit()">
+        Ausloggen
+    </md-button>
+
+    <md-button class="md-raised logout-button" ng-click="$ctrl.userdata()">
+        Userinfo
+    </md-button>
+</div>

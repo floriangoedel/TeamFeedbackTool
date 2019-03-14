@@ -1,0 +1,25 @@
+<style>
+    #menue-div {cursor: pointer;}
+    .menue-icon {display: block; position: absolute; overflow: hidden; width: 30px;
+        height: 28px; font-size: 0; text-indent:    -9999px; box-shadow: none;
+        border: none; cursor: pointer;
+        transition: background 0.3s; background-color: transparent;}
+    .menue-icon:focus {outline: none;}
+    .menue-icon span {display: block; position: absolute; top: 11px; left: 0; right: 0; height: 4px; background-color: #ffffff; border-radius: 4px;}
+    .menue-icon span:before, .menue-icon span:after {position: absolute; display: block; left: 0; width: 100%; height: 4px; background-color: #ffffff; content: ""; transition-duration: 0.3s, 0.3s; transition-delay: 0.3s, 0s; border-radius: 4px;}
+    .menue-icon span:before {top: -8px;}
+    .menue-icon span:after {bottom: -8px;}
+
+    .menue-icon-X span {transition: background 0s 0.3s;}
+    .menue-icon-X span:before {transition-property: top, transform;}
+    .menue-icon-X span:after {transition-property: bottom, transform;}
+    .menue-icon-X.button-active span {background: none;}
+    .menue-icon-X.button-active span:before {top: 0; transform: rotate(45deg);}
+    .menue-icon-X.button-active span:after {bottom: 0; transform: rotate(-45deg);}
+    .menue-icon-X.button-active span:before, .menue-icon-X.button-active span:after {transition-delay: 0s, 0.3s;}
+</style>
+<div id="menue-div" ng-click="$ctrl.toggle_menu()">
+    <button class="menue-icon menue-icon-X" >
+        <span></span>
+    </button>
+</div>

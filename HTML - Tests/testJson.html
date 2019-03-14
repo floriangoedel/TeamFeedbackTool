@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+        window.addEventListener("load", function(){
+            document.querySelector("#form_submit").addEventListener(
+                "click", function(){
+                    (async () => {
+                        const rawResponse = await fetch('../Backend/PHPToJSON.php', {
+                            method: 'POST',
+                            headers: {
+                                'Accept': 'application/json',
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ username : document.querySelector("#form_username").value})
+                        });
+                        const content = await rawResponse.json();
+
+                        console.log(content);
+                    })();
+                }
+            )
+        })
+    </script>
+
+</head>
+<body>
+Hello, please register now
+<form id="registration_form" action="../Backend/PHPToJSON.php" method="POST">
+    <label for="form_username"></label><input type="text" id="form_username" name="username" />
+    <input type="button" id="form_submit" value="Registerieren" />
+</form>
+</body>
+</html>

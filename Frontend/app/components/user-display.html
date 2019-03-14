@@ -1,0 +1,39 @@
+<style>
+    .user-display {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .user-display .user-profile {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        transition: 0.3s;
+    }
+
+    .user-display .user-profile:hover {
+        cursor: pointer;
+        background-color: #E5E5E5;
+    }
+
+    .user-display .text {
+        font-size: 1rem;
+        color: #ffffff;
+        margin-right: 0.8rem;
+        cursor: pointer;
+        /* make this item unselectable */
+        -webkit-user-select: none; /* Chrome Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */
+        -o-user-select: none;
+        user-select: none;
+    }
+</style>
+<div class="user-display" layout="row">
+    <span class="text" ng-click="$ctrl.toggleProfileMenue()">Login/Registrierung</span>
+    <img src="resources/baseline-person-24px.svg" class="user-profile" ng-click="$ctrl.toggleProfileMenue()">
+</div>

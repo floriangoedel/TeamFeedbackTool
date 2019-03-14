@@ -1,0 +1,62 @@
+<style>
+    .user-display-username .username {
+        font-size: 1rem;
+        color: #ffffff;
+        margin-right: 0.8rem;
+        /* make this item unselectable */
+        -webkit-user-select: none; /* Chrome Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */
+        -o-user-select: none;
+        user-select: none;
+    }
+
+    .user-display-username {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .user-display .username {
+        font-size: 1rem;
+        color: #ffffff;
+        margin-right: 0.8rem;
+        cursor: pointer;
+        /* make this item unselectable */
+        -webkit-user-select: none; /* Chrome Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */
+        -o-user-select: none;
+        user-select: none;
+    }
+
+    .user-display {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .user-display .user-profile {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        transition: 0.3s;
+    }
+
+    .user-display .user-profile:hover {
+        cursor: pointer;
+        background-color: #E5E5E5;
+    }
+
+
+</style>
+<div class="user-display-username" layout="row" ng-click="$ctrl.toggleProfileMenue()">
+    <span class="username">{{ $ctrl.username }}</span>
+    <div class="user-display" layout="row">
+        <img src="resources/baseline-person-24px.svg" class="user-profile">
+    </div>
+</div>

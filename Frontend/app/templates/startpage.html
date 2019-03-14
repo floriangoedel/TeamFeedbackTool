@@ -1,0 +1,9 @@
+<header-not-logged-in ng-if="!isLoggedIn"></header-not-logged-in>
+<header-without-menue ng-if="isLoggedIn"></header-without-menue>
+<subheader>
+    <a href="#!/">Startseite</a>
+</subheader>
+<register-login-switch ng-if="!isLoggedIn"></register-login-switch>
+<logout ng-if="isLoggedIn"></logout>
+<inhalt></inhalt>
+<footer></footer>

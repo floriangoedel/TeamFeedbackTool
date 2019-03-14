@@ -1,0 +1,123 @@
+<style>
+
+    .idvProfile {
+        margin-top: 10rem;
+        margin-left: 10rem;
+    }
+</style>
+
+<div class="idvProfile">
+    <div class="email">
+        Ihre angegebene Email-Adresse lautet: <i>{{$ctrl.email}}</i>
+    </div>
+    <br>
+    <form name="$ctrl.individualProfileNames">
+        <div class="change-firstname">
+            <div class="firstname"> Ihr Vorname lautet: <i>{{$ctrl.firstname}}</i></div>
+            <md-input-container>
+                <label>Vorname</label>
+                <input required type="text" name="firstname" ng-model="$ctrl.frm_firstname"
+                       minlength="3" maxlength="100" ng-pattern="/^[a-zA-Z]+(?:[\s.]+[a-zA-Z]+)*$/"/>
+                <div class="messages" ng-messages="$ctrl.individualProfile.firstname.$error">
+                    <div ng-message="pattern">
+                        Bitte geben Sie einen gültigen Namen ein
+                    </div>
+                    <div ng-message="minlength">
+                        Ihr Name muss mindestens 3 Zeichen lang sein
+                    </div>
+                    <div ng-message="maxlength">
+                        Ihr Name darf maximal 100 Zeichen lang sein
+                    </div>
+                    <div ng-message="required">
+                        Bitte geben Sie einen Vornamen ein
+                    </div>
+                </div>
+            </md-input-container>
+            <md-button class="md-raised" ng-click="$ctrl.submitFirstname()" ng-disabled="$ctrl.individualProfileNames.firstname.$invalid">
+                Vornamen ändern
+            </md-button>
+            {{$ctrl.infoFirstname}}
+        </div>
+    <div class="change-surname">
+        <div class="surname"> Ihr Nachname lautet: <i>{{$ctrl.surname}}</i></div>
+        <md-input-container>
+            <label>Nachname</label>
+            <input required type="text" name="surname" ng-model="$ctrl.frm_surname"
+                   minlength="3" maxlength="100" ng-pattern="/^[a-zA-Z]+(?:[\s.]+[a-zA-Z]+)*$/"/>
+            <div class="messages" ng-messages="$ctrl.individualProfile.surname.$error">
+                <div ng-message="pattern">
+                    Bitte geben Sie einen gültigen Namen ein
+                </div>
+                <div ng-message="minlength">
+                    Ihr Name muss mindestens 3 Zeichen lang sein
+                </div>
+                <div ng-message="maxlength">
+                    Ihr Name darf maximal 100 Zeichen lang sein
+                </div>
+                <div ng-message="required">
+                    Bitte geben Sie einen Nachnamen ein
+                </div>
+            </div>
+        </md-input-container>
+        <md-button class="md-raised" ng-click="$ctrl.submitSurname()" ng-disabled="$ctrl.individualProfileNames.surname.$invalid">
+            Nachnamen ändern
+        </md-button>
+        {{$ctrl.infoSurname}}
+    </div>
+    </form>
+    <form name="$ctrl.individualProfilePassword">
+    <div class="change-password">
+        <div class="password"> Passwort ändern:</div>
+        <md-input-container>
+            <label>Altes Passwort</label>
+            <input type="password" name="oldpassword" ng-model="$ctrl.frm_oldpassword"
+                   minlength="6" maxlength="100"/>
+            <div class="messages" ng-messages="$ctrl.individualProfile.password.$error">
+                <div ng-message="minlength">
+                    Ihr Passwort muss mindestens 6 Zeichen lang sein
+                </div>
+                <div ng-message="maxlength">
+                    Ihr Passwort darf maximal 100 Zeichen lang sein
+                </div>
+            </div>
+        </md-input-container>
+        <md-input-container>
+            <label>Neues Passwort</label>
+            <input required type="password" name="newpassword" ng-model="$ctrl.frm_newpassword"
+                   minlength="6" maxlength="100"/>
+            <div class="messages" ng-messages="$ctrl.individualProfile.newpassword.$error">
+                <div ng-message="minlength">
+                    Ihr Passwort muss mindestens 6 Zeichen lang sein
+                </div>
+                <div ng-message="maxlength">
+                    Ihr Passwort darf maximal 100 Zeichen lang sein
+                </div>
+                <div ng-message="required">
+                    Bitte geben SIe Ihr neues Passwort ein
+                </div>
+            </div>
+        </md-input-container>
+        <md-input-container>
+            <label>Passwort wiederholen</label>
+            <input required type="password" name="passwordcheck" ng-model="$ctrl.frm_passwordcheck"
+                   minlength="6" maxlength="100"/>
+            <div class="messages" ng-messages="$ctrl.individualProfile.passwordcheck.$error">
+                <div ng-message="minlength">
+                    Ihr Passwort muss mindestens 6 Zeichen lang sein
+                </div>
+                <div ng-message="maxlength">
+                    Ihr Passwort darf maximal 100 Zeichen lang sein
+                </div>
+                <div ng-message="required">
+                    Bitte verifizieren Sie Ihr neues Passwort
+                </div>
+            </div>
+        </md-input-container>
+        <md-button class="md-raised" ng-click="$ctrl.submitPassword()" ng-disabled="$ctrl.individualProfilePassword.$invalid">
+            Passwort ändern
+        </md-button>
+        {{$ctrl.infoPassword}}
+    </div>
+    </form>
+</div>
+</form>

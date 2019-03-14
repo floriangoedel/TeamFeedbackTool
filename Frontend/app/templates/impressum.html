@@ -1,0 +1,12 @@
+<header-without-menue ng-if="isLoggedIn"></header-without-menue>
+<header-not-logged-in ng-if="!isLoggedIn"></header-not-logged-in>
+<subheader>
+  <a href="#!/dashboard" ng-if="isLoggedIn">Dashboard</a>
+  <a href="#!/" ng-if="!isLoggedIn">Startseite</a>
+  >
+  <a href="#!/impressum">Impressum</a>
+</subheader>git pus
+<register-login-switch ng-if="!isLoggedIn"></register-login-switch>
+<logout ng-if="isLoggedIn"></logout>
+<impressum-inhalt></impressum-inhalt>
+<footer></footer>

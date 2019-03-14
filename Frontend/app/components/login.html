@@ -1,0 +1,95 @@
+<style>
+    .login{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        float: right;
+        align-items: center;
+        width: 15rem;
+        padding-right: 0.5rem;
+        padding-bottom: 1rem;
+        z-index: 2;
+    }
+
+    .login .login-button{
+        margin: 0;
+        background-color: rgba(133, 0, 59, 1);
+        color: white;
+        border-radius: 0.5rem;
+    }
+
+    .login .login-button:hover{
+        color: rgba(133, 0, 59, 1);
+    }
+
+    .login .funktions-spezifikation {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .login .input-container {
+        margin: 0.5rem 1rem 0 1rem;
+        width: 12rem;
+    }
+
+    .login .input-container input{
+        transition: 500ms;
+    }
+
+    .login .messages div{
+        padding-bottom: 1rem;
+    }
+
+    .login .info {
+        text-align: center;
+    }
+</style>
+
+<form name="$ctrl.login" method="post" action="../../../Backend/LoginUser.php">
+    <div class="login">
+        <span class="funktions-spezifikation">Anmelden</span>
+        <md-input-container class="input-container">
+            <label>Email</label>
+            <input required type="email" name="email" ng-model="$ctrl.frm_email"
+                   minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
+            <div class="messages" ng-messages="$ctrl.login.email.$error">
+                <div ng-message="pattern">
+                    Bitte geben Sie eine gültige Email-Adresse ein
+                </div>
+                <div ng-message="minlength">
+                    Ihr Email-Adresse muss mindestens 8 Zeichen lang sein
+                </div>
+                <div ng-message="maxlength">
+                    Ihr Email-Adresse darf maximal 100 Zeichen lang sein
+                </div>
+                <div ng-message="required">
+                    Bitte geben Sie eine Email-Adresse ein
+                </div>
+            </div>
+        </md-input-container>
+        <md-input-container class="input-container">
+            <label>Passwort</label>
+            <input required type="password" name="password" ng-model="$ctrl.frm_password"
+                   minlength="6" maxlength="100"/>
+            <div class="messages" ng-messages="$ctrl.login.password.$error">
+                <div ng-message="minlength">
+                    Ihr Passwort muss mindestens 6 Zeichen lang sein
+                </div>
+                <div ng-message="maxlength">
+                    Ihr Passwort darf maximal 100 Zeichen lang sein
+                </div>
+                <div ng-message="required">
+                    Bitte geben Sie ihr Passwort ein
+                </div>
+            </div>
+        </md-input-container>
+        <md-button class="md-raised login-button" ng-disabled="$ctrl.login.$invalid" ng-click="$ctrl.submit()">
+            Einloggen
+        </md-button>
+        <div class="info">
+            <br>
+            {{$ctrl.info}}
+        </div>
+    </div>
+</form>

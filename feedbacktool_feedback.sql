@@ -1,0 +1,19 @@
+USE feedbacktool;
+
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (2, 2, 1, '2018-11-19', 9, 5, 0, 1);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (3, 2, 1, '2018-11-26', 8, 8, 0, 0);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (4, 2, 1, '2018-12-03', 5, 9, 1, 0);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (5, 2, 1, '2018-12-10', 4, 7, 1, 0);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (6, 2, 1, '2018-12-17', 6, 7, 1, 0);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (7, 2, 1, '2018-12-24', 7, 5, 1, 0);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (8, 2, 1, '2018-12-31', 8, 2, 0, 1);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (9, 2, 1, '2019-01-07', 5, 10, 1, 0);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (10, 4, 1, '2018-11-12', 8, 4, 1, 0);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (11, 4, 1, '2018-11-19', 6, 5, 1, 0);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (12, 4, 1, '2018-11-26', 8, 3, 1, 0);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (13, 4, 1, '2018-12-03', 7, 4, 0, 1);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (14, 4, 1, '2018-12-10', 5, 5, 1, 0);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (15, 4, 1, '2018-12-17', 6, 7, 1, 0);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (16, 4, 1, '2018-12-24', 4, 8, 1, 0);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (17, 4, 1, '2018-12-31', 5, 7, 0, 1);
+INSERT INTO feedbacktool.feedback (pk_feedbackId, fk_userId, fk_projectId, date, sliderValue_stress, sliderValue_motivation, work_performance_satisfied, technicalSkills) VALUES (18, 4, 1, '2019-01-07', 3, 10, 1, 0);

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Noto Sans';
+    url(https://fonts.googleapis.com/css?family=Noto+Sans);
+}
+
+* {
+    font-family: "Noto Sans", sans-serif;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: rgb(133, 0, 59);
+    text-decoration: underline;
+}

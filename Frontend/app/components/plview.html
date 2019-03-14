@@ -1,0 +1,27 @@
+<style>
+    .chart1 {
+        position: absolute;
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+        margin-left: 17rem;
+        width: 67%;
+    }
+
+    .chart2 {
+        position: absolute;
+        margin-top: 50rem;
+        margin-bottom: 4rem;
+        margin-left: 17rem;
+        width: 67%;
+    }
+</style>
+<div>
+    <div ng-show="$ctrl.chartShow" class="chart1">
+        <canvas id="myChart"></canvas>
+    </div>
+    <div ng-show="$ctrl.chartShow" class="chart2">
+        <canvas id="myChart2" height="50"></canvas>
+    </div>
+    <employee-dropdown></employee-dropdown>
+    <invite-employee></invite-employee>
+</div>

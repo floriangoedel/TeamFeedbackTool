@@ -1,0 +1,28 @@
+<style>
+    .register-login-switch {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         flex-shrink: 1;
+         flex-grow: 1;
+         width: auto;
+         position: fixed;
+         top: 5.9rem;
+         right: 0;
+         border-bottom-left-radius: 1rem;
+         background-color: rgb(233, 213, 222);
+         z-index: 1;
+    }
+
+    .register-login-switch .switchButton {
+        max-width: 12rem;
+        background-color: lightgrey;
+    }
+
+</style>
+<div class="register-login-switch">
+    <register ng-show="registerLoginSwitch.register"></register>
+    <login ng-show="registerLoginSwitch.login"></login>
+    <md-button class="switchButton" ng-click="$ctrl.toggleSwitch()">{{ $ctrl.toggleText }}</md-button>
+</div>

@@ -1,0 +1,42 @@
+<!--- Legacy Code --->
+<style>
+    .cookie-display {
+        width: 90%;
+        height: 4.5rem;
+        background-color: #000000;
+        color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-shrink: 1;
+        flex-grow: 1;
+        position: fixed;
+        bottom: 0.5rem;
+        left: 5%;
+        border-radius: 0.5rem;
+    }
+
+    .cookie-display .cookie-info {
+        width: 75%;
+    }
+
+    .cookie-display .cookie-button-ok {
+        width: 15%;
+        background-color: rgba(58, 139, 0, 0.80);
+        color: #ffffff;
+        border-radius: 0.5rem;
+    }
+
+    .cookie-display .cookie-button-ok:hover {
+        background-color: rgba(58, 139, 0, 1);
+    }
+
+</style>
+<div class="cookie-display" ng-show="cookieDisplay.isVisible">
+    <span class="cookie-info">Diese Webseite verwendet Cookies, um Daten des Nutzers, wie dem Vor- & Nachnamen,
+                                nach dem Einloggen sicher auf der lokalen Maschine des Nutzers zu speichern,
+                                um schnellere Ladezeiten zu gewähren.
+    </span>
+    <md-button class="cookie-button-ok" ng-click="$ctrl.removeCookieDisplay()">Ich habe verstanden</md-button>
+</div>

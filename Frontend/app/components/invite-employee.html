@@ -1,0 +1,53 @@
+<style>
+    .inviteEmployee{
+        position: absolute;
+        bottom: 10rem;
+        right: 2rem;
+        width: 13rem;
+    }
+
+    .inviteEmployee md-input-container{
+        width: 13rem;
+    }
+
+    .inviteEmployee form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inviteEmployee .button{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<div class="inviteEmployee">
+    <form name="$ctrl.inviteEmployee" method="post">
+        <md-input-container>
+            <label>Mitarbeiter-Email</label>
+            <input required type="email" name="email" ng-model="$ctrl.frm_employee_email"
+                   minlength="8" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
+            <div class="messages" ng-messages="$ctrl.inviteEmployee.email.$error">
+                <div ng-message="pattern">
+                    Bitte geben Sie eine gültige Email-Adresse ein
+                </div>
+                <div ng-message="minlength">
+                    Ihr Email-Adresse muss mindestens 8 Zeichen lang sein
+                </div>
+                <div ng-message="maxlength">
+                    Ihr Email-Adresse darf maximal 100 Zeichen lang sein
+                </div>
+                <div ng-message="required">
+                    Bitte geben Sie eine Email-Adresse ein
+                </div>
+            </div>
+        </md-input-container>
+        <md-button class="md-raised button" ng-disabled="$ctrl.inviteEmployee.$invalid" ng-click="$ctrl.submitEmployee()">
+            Mitarbeiter hinzufügen
+        </md-button>
+        <div class="info">
+            <br>
+            {{$ctrl.info}}
+        </div>
+    </form>
+</div>

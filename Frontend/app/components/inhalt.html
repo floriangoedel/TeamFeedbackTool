@@ -1,0 +1,60 @@
+<style>
+    .inhalt {
+        transform: translateY(5.4rem);
+        z-index: -1;
+    }
+
+    .inhalt .text-block {
+        margin-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .inhalt .paragraph {
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+
+    .inhalt .heading {
+        color: rgb(133, 0, 59);
+        font-size: 2.5rem;
+    }
+
+    .inhalt .dashboard-button{
+        padding: 1rem;
+        background-color: rgba(133, 0, 59, 1);
+        color: white;
+        border-radius: 0.5rem;
+    }
+
+    .inhalt .dashboard-button-block{
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+    }
+
+    .inhalt .dashboard-button:hover{
+        color: rgba(133, 0, 59, 1);
+    }
+</style>
+<div class="inhalt">
+    <div class="text-block">
+        <h1 class="heading">Team-Feedback Tool</h1>
+        <p class="paragraph">Das Projektmanagement-Tool mit welchem Sie Ihre Projektmitglieder im Überblick behalten!
+        <br>Dieses Tool ersetzt natürlich keine persönlichen Gespräche zwischen Projektleiter und Mitarbeiter, sondern dient als wertvolle Ergänzung der Kommunikation.</p>
+    </div>
+    <div class="text-block dashboard-button-block">
+        <md-button class="dashboard-button" ng-click="$ctrl.openDashboard()">
+            Bereits angemeldet? Dashboard starten
+        </md-button>
+    </div>
+    <div class="text-block">
+        <h3 class="heading">Das Entwicklerteam</h3>
+        <p class="paragraph">Dieses Projekt ist im Unterricht an der HTL 3 Rennweg entstanden. Das Entwicklerteam besteht aus dem Projektleiter Florian Gödel (Benutzerseitige Entwicklung) und den
+        Projektmitarbeitern Dominik Novi (Benutzerseitige Entwicklung), Felix Linhart (Serverseitige Entwicklung) und Kevin Chelappurath (Benutzerseitige Entwicklung).</p>
+        <h3 class="text">Wir hoffen, dass Sie unser Produkt positiv anspricht und wir Ihnen bei Projektarbeiten behilflich sein können!</h3>
+    </div>
+</div>

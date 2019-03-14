@@ -1,0 +1,162 @@
+<style>
+    .register{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        float: right;
+        align-items: center;
+        width: 15rem;
+        padding-right: 0.5rem;
+        padding-bottom: 1rem;
+        height: 26rem;
+        overflow-y: scroll;
+        z-index: 2;
+    }
+
+    .register::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .register::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+    }
+
+    .register::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    }
+
+    .register .register-button{
+        margin: 0;
+        background-color: rgba(133, 0, 59, 1);
+        color: white;
+        border-radius: 0.5rem;
+    }
+
+    .register .register-button:hover{
+        color: rgba(133, 0, 59, 1);
+    }
+
+    .register .funktions-spezifikation {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .register .input-container {
+        margin: 0.5rem 1rem 0 1rem;
+        width: 12rem;
+    }
+
+    .register .messages div{
+        padding-bottom: 1rem;
+    }
+
+    .register .info {
+        text-align: center;
+    }
+</style>
+
+<form name="$ctrl.register" method="post" action="../../../Backend/RegisterUser.php">
+    <div class="register">
+        <span class="funktions-spezifikation">Registrieren</span>
+        <md-input-container class="input-container">
+            <label>Email</label>
+            <input required type="email" name="email" ng-model="$ctrl.frm_email"
+                   minlength="8" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
+            <div class="messages" ng-messages="$ctrl.register.email.$error">
+                <div ng-message="pattern">
+                    Bitte geben Sie eine gültige Email-Adresse ein
+                </div>
+                <div ng-message="minlength">
+                    Ihr Email-Adresse muss mindestens 8 Zeichen lang sein
+                </div>
+                <div ng-message="maxlength">
+                    Ihr Email-Adresse darf maximal 100 Zeichen lang sein
+                </div>
+                <div ng-message="required">
+                    Bitte geben Sie eine Email-Adresse ein
+                </div>
+            </div>
+        </md-input-container>
+        <md-input-container class="input-container">
+            <label>Vorname</label>
+            <input required type="text" name="firstname" ng-model="$ctrl.frm_firstname"
+                   minlength="3" maxlength="100" ng-pattern="/^[a-zA-Z]+(?:[\s.]+[a-zA-Z]+)*$/"/>
+            <div class="messages" ng-messages="$ctrl.register.firstname.$error">
+                <div ng-message="pattern">
+                    Bitte geben Sie einen gültigen Namen ein
+                </div>
+                <div ng-message="minlength">
+                    Ihr Name muss mindestens 3 Zeichen lang sein
+                </div>
+                <div ng-message="maxlength">
+                    Ihr Name darf maximal 100 Zeichen lang sein
+                </div>
+                <div ng-message="required">
+                    Bitte geben Sie einen Vornamen ein
+                </div>
+            </div>
+        </md-input-container>
+        <md-input-container class="input-container">
+            <label>Nachname</label>
+            <input required type="text" name="surname" ng-model="$ctrl.frm_surname"
+                   minlength="3" maxlength="100" ng-pattern="/^[a-zA-Z]+(?:[\s.]+[a-zA-Z]+)*$/"/>
+            <div class="messages" ng-messages="$ctrl.register.surname.$error">
+                <div ng-message="pattern">
+                    Bitte geben Sie einen gültigen Namen ein
+                </div>
+                <div ng-message="minlength">
+                    Ihr Name muss mindestens 3 Zeichen lang sein
+                </div>
+                <div ng-message="maxlength">
+                    Ihr Name darf maximal 100 Zeichen lang sein
+                </div>
+                <div ng-message="required">
+                    Bitte geben Sie einen Nachnamen ein
+                </div>
+            </div>
+        </md-input-container>
+        <md-input-container class="input-container">
+            <label>Passwort</label>
+            <input required type="password" name="password" ng-model="$ctrl.frm_password"
+                   minlength="6" maxlength="100"/>
+            <div class="messages" ng-messages="$ctrl.register.password.$error">
+                <div ng-message="minlength">
+                    Ihr Passwort muss mindestens 6 Zeichen lang sein
+                </div>
+                <div ng-message="maxlength">
+                    Ihr Passwort darf maximal 100 Zeichen lang sein
+                </div>
+                <div ng-message="required">
+                    Bitte geben Sie ein Passwort ein
+                </div>
+            </div>
+        </md-input-container>
+        <md-input-container class="input-container">
+            <label>Passwort wiederholen</label>
+            <input required type="password" name="passwordcheck" ng-model="$ctrl.frm_passwordcheck"
+                   minlength="6" maxlength="100"/>
+            <div class="messages" ng-messages="$ctrl.register.passwordcheck.$error">
+                <div ng-message="minlength">
+                    Ihr Passwort muss mindestens 6 Zeichen lang sein
+                </div>
+                <div ng-message="maxlength">
+                    Ihr Passwort darf maximal 100 Zeichen lang sein
+                </div>
+                <div ng-message="required">
+                    Bitte verifizieren Sie Ihr Passwort
+                </div>
+            </div>
+        </md-input-container>
+        <md-button class="md-raised register-button" ng-disabled="$ctrl.register.$invalid" ng-click="$ctrl.submit()">
+            Registrieren
+        </md-button>
+        <div class="info">
+            <br>
+            {{$ctrl.info}}
+        </div>
+    </div>
+</form>
+
