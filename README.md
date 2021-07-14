@@ -1,2 +1,2 @@
 # TeamFeedBackTool
-# A tool for managing feedback in project teams.
+# A website to give feedback to your team members
